@@ -1,0 +1,7 @@
+# Don't check auto-generated stuff into git.
+coverage
+build
+node_modules
+
+# Don't commit the error log.
+npm-debug.log

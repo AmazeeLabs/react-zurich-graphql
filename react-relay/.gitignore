@@ -1,0 +1,19 @@
+# Don't check auto-generated stuff into git
+coverage
+build
+node_modules
+
+# i18n
+/i18n/components
+/i18n/messages.pot
+
+# Environment specific configuration
+.env.local
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+
+psi-mobile.json
+psi-desktop.json

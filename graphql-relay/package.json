@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.0",
+    "babel-polyfill": "^6.9.0",
+    "babel-preset-es2017": "^1.4.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "dataloader": "^1.2.0",
+    "dotenv": "^2.0.0",
+    "dotenv-extended": "^1.0.1",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.3",
+    "faker": "^3.1.0",
+    "graphiql": "^0.7.2",
+    "graphql": "^0.6.0",
+    "graphql-relay": "^0.4.2",
+    "lodash": "^4.12.0",
+    "mongoose": "^4.5.1",
+    "rimraf": "^2.5.2",
+    "validator": "^5.4.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^3.0.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "nodemon": "^1.9.2"
+  },
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "prebuild": "npm run clean",
+    "dev": "nodemon src --watch src --exec babel-node",
+    "predev": "npm run db:setup",
+    "start": "node build",
+    "prestart": "npm run db:setup",
+    "lint": "eslint . --ignore-path .gitignore",
+    "clean": "rimraf ./build/*",
+    "db:drop": "babel-node scripts/dropDatabase",
+    "db:setup": "babel-node scripts/setupDatabase",
+    "db:reset": "npm run db:drop && npm run db:setup"
+  },
+  "engines": {
+    "node": "6.3.0",
+    "npm": "3.10.3"
+  }
+}

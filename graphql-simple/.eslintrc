@@ -1,0 +1,53 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "rules": {
+    "arrow-body-style": [2, "as-needed"],
+    "comma-dangle": [2, "always-multiline"],
+    "indent": [2, 2, { "SwitchCase": 1 }],
+    "key-spacing": [0, {
+      "singleLine": {
+        "beforeColon": false,
+        "afterColon": true
+      },
+      "multiLine": {
+        "beforeColon": true,
+        "afterColon": true,
+        "align": "colon",
+        "mode": "minimum"
+      }
+    }],
+    "lines-around-comment": [2, {
+      "beforeBlockComment": true,
+      "beforeLineComment": true,
+      "allowObjectStart": true,
+      "allowObjectEnd": true,
+      "allowArrayStart": true,
+      "allowArrayEnd": true
+    }],
+    "max-len": [1, 120],
+    "newline-per-chained-call": [2, {
+      "ignoreChainWithDepth" : 2
+    }],
+    "no-console": 0,
+    "no-multi-spaces" : 0,
+    "no-multiple-empty-lines" : [2, {"max" : 3}],
+    "no-trailing-spaces" : 0,
+    "no-use-before-define": 0,
+    "object-property-newline" : 2,
+    "padded-blocks": 0,
+    "prefer-template": 0,
+    "require-jsdoc": [0, {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": false,
+      }
+    }],
+    "valid-jsdoc": [0, {
+      "requireReturn": false,
+      "requireReturnDescription": false,
+      "matchDescription": ".+",
+    }]
+  }
+}

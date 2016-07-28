@@ -1,0 +1,5 @@
+.Wrapper {
+  composes: container from 'milligram';
+
+  text-align: center;
+}

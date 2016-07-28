@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "dependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.0",
+    "babel-polyfill": "^6.9.0",
+    "babel-preset-es2017": "^1.4.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "dataloader": "^1.2.0",
+    "express": "^4.14.0",
+    "express-graphql": "^0.5.3",
+    "graphiql": "^0.7.2",
+    "graphql": "^0.6.0",
+    "node-fetch": "^1.5.3",
+    "rimraf": "^2.5.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^3.0.0",
+    "eslint-config-airbnb": "^9.0.1",
+    "nodemon": "^1.9.2"
+  },
+  "scripts": {
+    "build": "babel src --out-dir build",
+    "prebuild": "npm run clean",
+    "dev": "nodemon src --watch src --exec babel-node",
+    "start": "node build",
+    "lint": "eslint . --ignore-path .gitignore",
+    "clean": "rimraf ./build/*"
+  },
+  "engines": {
+    "node": "6.3.0",
+    "npm": "3.10.3"
+  }
+}
