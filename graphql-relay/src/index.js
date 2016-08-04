@@ -23,7 +23,7 @@ import schema from './schema';
 mongoose.Promise = Promise;
 
 const app = express();
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3000;
 
 app.use('/', graphql({
   schema,
